@@ -146,3 +146,101 @@ print(beatles.reversed())
 
 // How to store and find data in dictionaries
 
+// get infos out with their key
+
+let employee = [
+    "name": "Moosh",
+    "job": "Nice man",
+    "location": "Where you need him"
+]
+
+print(employee["name"])
+
+// default value for more safety
+
+print(employee["name", default: "Unbekannt"])
+
+// empty dictionary
+
+var heights = [String: Int]()
+heights["Moosh"] = 175
+print(heights)
+
+
+
+// How to use sets for fast data lookup
+// they not store duplicates
+
+var actors = Set([
+    "Denzel",
+    "Tom",
+    "Nicolas",
+    "Samuel"
+])
+
+print(actors)
+actors.insert("Emma")
+print(actors)
+
+let testingSpeed = actors.contains("Emma")
+print(testingSpeed)
+
+let anzahlImSet = actors.count
+print(anzahlImSet)
+
+let sortiertesSetalsArray = actors.sorted()
+print(sortiertesSetalsArray)
+
+
+
+// How to create and use enums
+// safer to use giving the choices
+
+enum Weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+}
+
+var day = Weekday.friday
+
+// shorthands
+enum Months { case jan, feb, mar, apr }
+var monat = Months.jan
+monat = .feb
+
+
+
+// How to use type annotations
+
+let surname: String = "Müller"
+var obstMenge: Double = 0 //overridden
+
+// explain the type before a constant gets its value
+let unbekannteKonstante: Int
+unbekannteKonstante = 42
+print(unbekannteKonstante)
+
+
+
+// Checkpoint 2
+
+var arrayOfStrings: [String] = []
+arrayOfStrings.append("Blaubär")
+arrayOfStrings.append("Gelbbär")
+arrayOfStrings.append("Blaubär")
+arrayOfStrings.append(contentsOf: ["Grünbär", "Schwarzbär"])
+
+let aOSalsSet = Set(arrayOfStrings)
+
+print("Das Array hat \(arrayOfStrings.count) Items und \(aOSalsSet.count) einzigartige.")
+
+
+
+// How to check a condition is true or false
+// https://www.hackingwithswift.com/quick-start/beginners/how-to-check-a-condition-is-true-or-false
+
+
+
