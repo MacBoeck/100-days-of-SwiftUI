@@ -240,7 +240,71 @@ print("Das Array hat \(arrayOfStrings.count) Items und \(aOSalsSet.count) einzig
 
 
 // How to check a condition is true or false
-// https://www.hackingwithswift.com/quick-start/beginners/how-to-check-a-condition-is-true-or-false
 
+let ergebnis2 = 85
+if ergebnis2 > 80 {
+    print("Great job!")
+}
+
+let nonEmptyString = "Test"
+if nonEmptyString.isEmpty {
+    print("Was empty!")
+}
+
+
+
+// How to check multiple conditions
+
+// if / else if / else
+// && to check, both true (AND)
+// || to check, one is true (OR)
+
+
+
+// How to use switch statements to check multiple conditions
+
+// switch must cover all cases, or code does not compile
+// switch checks in order of appearance
+
+let place = "Hannover"
+
+switch place {
+case "Magdeburg":
+    print("An der Elbe… genau dasselbe.")
+case "Berlin":
+    print("Hey Bärchen!")
+case "Hannover":
+    print("Home is where your WiFi is.")
+default:
+    print("Not my town.")
+}
+
+// fallthrough kann man nutzen um trotzdem in den nächstunteren Case zu "fallen"
+
+
+
+// How to use the ternary conditional operator for quick tests
+
+let ageNew = 18
+let canVote = (ageNew >= 18) ? "Yes" : "No"
+print(canVote)
+
+// WTF-Mnemonic: WHAT check, what if TRUE, what if FALSE
+
+
+
+// How to use a for-loop to repeat work
+
+for i in 1...12 {
+    print("5 x \(i) is \(5 * i).")
+}
+
+// 1 trough 5 (1...5) includes 5
+// 1 up to 5 (1..<5) without end of range
+
+
+
+// How to use a while loop to repeat work
+// https://www.hackingwithswift.com/quick-start/beginners/how-to-use-a-while-loop-to-repeat-work
 
 
